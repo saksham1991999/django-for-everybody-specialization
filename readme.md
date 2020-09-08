@@ -16,12 +16,13 @@ For Educational Purpose Only. It's better if you complete the assignments on you
 
 
 ## Courses
-[Course 1: Web Application Technologies and Django]()
+[Course 1: Web Application Technologies and Django](Web Application Technologies and Django)
 
-[Course 2: Building Web Applications in Django]()
+[Course 2: Building Web Applications in Django](Building Web Applications in Django)
 
-[Course 3: Django Features and Libraries]()
+[Course 3: Django Features and Libraries](Django Features and Libraries)
 
-[Course 4: Using JavaScript, JQuery, and JSON in Django]()
+[Course 4: Using JavaScript, JQuery, and JSON in Django](Using%20JavaScript%2C%20JQuery%2C%20and%20JSON%20in%20Django)
+
 
 #### If you find this helpful, Please star this.
