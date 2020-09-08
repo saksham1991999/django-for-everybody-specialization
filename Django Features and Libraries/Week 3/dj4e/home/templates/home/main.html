@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>{{ settings.APP_NAME }}</title>
+    <!-- edit samples/settings.py and add APP_NAME='DJ4E Samples' or similar
+        Also make sure that home/context_processors.py exists and is included
+        settings.py context processors as 'home.context_processors.settings' -->
+</head>
+<body>
+    <h1>Welcome to the DJ4E Samples</h1>
+    <p>
+    Here are some samples (Each will open in a new tab):
+    <ul>
+        <li><a href="/autos">Autos CRUD</a>
+    </ul>
+<p>
+{% if user.is_authenticated %}
+<p>Authenticated as
+<pre>
+Name: {{ user.get_full_name }}
+Email: {{ user.email }}
+Id: {{ user.id }}
+<!-- https://stackoverflow.com/questions/26879011/check-if-current-user-is-logged-in-using-any-django-social-auth-provider -->
+Type: {% if backends.associated %} GitHub {% else %} Local {% endif %}
+</pre>
+</p>
+<p>You can <a href="/accounts/logout">Logout</a></p>
+{% else %}
+<p>You can <a href="/accounts/login">Login</a> if you like.</p>
+{% endif %}
+{% if islocal %}
+Some of the samples will require a user login to be created.
+</p>
+<p>
+You can play with this code at
+<a href="https://samples.dj4e.com" target="_blank">https://samples.dj4e.com</a>.
+{% else %}
+You
+might need an account and password to log in for certain features.  You might try this:
+<pre>
+Username: dj4e-samples
+Password: dj4e_nn_!
+</pre>
+There is a part of this password that you need to guess.  But if you have done your
+homework, it should only take you one guess (instead of 100 guesses).
+{% endif %}
+</p>
+
+    <p>
+        You can access the implementation of some of the later projects at
+        <a href="https://projects.dj4e.com/" target="_blank">https:/projects.dj4e.com/</a>.
+    </p>
+    <p>This sample code is available at
+    <a href="https://github.com/csev/dj4e-samples" target="_blank">
+    https://github.com/csev/dj4e-samples</a>
+    </p>
+</body>
+</html>
