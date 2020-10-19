@@ -18,7 +18,7 @@ Week 1 Quiz - JavaScript
 
 5. What happens in a normal end user's browser when there is a JavaScript error?
 
-    - [x] JavaScript skips the line in error and continues executing after the next semicolon (;)
+    - [x] Nothing except perhaps a small red error icon that is barely noticeable
 
 6. Where can a developer find which line in a web page of JavaScript file is causing a syntax error?
 
