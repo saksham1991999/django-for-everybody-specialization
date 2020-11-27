@@ -1,40 +1,56 @@
-Week 4 Quiz - Basic SQL
+# Basic SQL
 
-1. Structured Query Language (SQL) is used to (check all that apply)
+### 1. Structured Query Language (SQL) is used to (check all that apply)
 
-    - [x] Insert data
-    - [x] Create a table
-    - [x] Delete data
+- [ ] Run python
+- [x] Delete data
+- [x] Insert data
+- [x] Create a table
 
-2. Which of these is the correct syntax to make a new database using command line?
+### 2. Which of these is the correct syntax to make a new database using command line?
 
-    - [x] CREATE DATABASE people;
-    
-3. "INSERT INTO" is the keyword used to insert data into tables.
+- [ ] CREATE people;
+- [ ] MAKE DATASET people;
+- [x] CREATE DATABASE people;
+- [ ] MAKE people;
 
-    - [x] True
-    
-4. Which keyword is used to add conditions to your query?
+### 3. "INSERT INTO" is the keyword used to insert data into tables.
 
-    - [x] WHERE
+- [x] True
+- [ ] False
 
-5. Which command is used to retrieve all records from the table Users?
+### 4. Which keyword is used to add conditions to your query?
 
-    - [x] SELECT * FROM Users
+- [x] WHERE
+- [ ] IF
+- [ ] ONLYIF
+- [ ] SELECT
 
-6. Which keyword will cause the results of the query to be displayed in sorted order?
+### 5. Which command is used to retrieve all records from the table Users?
 
-    - [x] ORDER BY
+- [ ] RETRIEVE all FROM Users
+- [ ] SELECT all FROM Users
+- [x] SELECT * FROM Users
+- [ ] RETRIEVE * FROM Users
 
-7. The LIMIT clause helps to narrow down the number of rows returned by the query.
+### 6. Which keyword will cause the results of the query to be displayed in sorted order?
 
-    - [x] True
+- [ ] WHERE
+- [ ] None of these
+- [x] ORDER BY
+- [ ] GROUP BY
 
-8. Images, PDFs, and movies cannot be stored in a database.
+### 7. The LIMIT clause helps to narrow down the number of rows returned by the query.
 
-    - [x] False
+- [x] True
+- [ ] False
 
-9. A primary key can be set to null.
+### 8. Images, PDFs, and movies cannot be stored in a database.
 
-    - [x] False
+- [ ] True
+- [x] False
 
+### 9. A primary key can be set to null.
+
+- [ ] True
+- [x] False
