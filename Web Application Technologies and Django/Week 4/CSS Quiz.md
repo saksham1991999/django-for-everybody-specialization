@@ -75,6 +75,7 @@
 - [ ] It is recommended to use an "id" attribute many times in an HTML file
 - [x] A "class" attribute can be used many times in an HTML file
 - [ ] A "class" attribute can only be used once in an HTML file
+- [x] An "id" attribute should only be used once in an HTML file
 
 ### 11. For the following HTML, which description of the "style=" attribute is most accurate?
 
