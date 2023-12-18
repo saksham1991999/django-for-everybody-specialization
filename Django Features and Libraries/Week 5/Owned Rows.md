@@ -78,7 +78,7 @@
 
 - [ ] We retrieve all the objects and throw away the non-owned objects
 - [ ] We call the method of the same name in the super class
-- [x] We add a model tilter
+- [x] We add a model filter
 - [ ] We intercept the SQL and add a WHERE clause
 
 ### 12. In OwnerUpdateView, which is the "super" or "parent" class?
