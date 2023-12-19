@@ -44,7 +44,7 @@ data = {'one':'two', 'three': 4, 'five' : [ 'six', 'seven' ], 'eight' : { 'nine'
 
 ### 6. What is the jQuery call to retrieve a JSON document from the server?
 
-- [x] getJSON()
+- [x] getJSON() (wrong)
 - [ ] json_encode()
 - [ ] xHttpRequest()
 - [ ] fetch()

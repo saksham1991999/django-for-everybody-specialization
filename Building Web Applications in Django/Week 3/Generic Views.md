@@ -19,7 +19,7 @@
 - [ ] dispatch()
 - [ ] get_queryset()
 - [ ] get_object()
-- [x] ender_to_response()
+- [x] ender_to_response() (wrong answer)
 
 ### 4. In the class django.views.generic.detail.DetailView, which of the following methods is called latest in the process?
 
