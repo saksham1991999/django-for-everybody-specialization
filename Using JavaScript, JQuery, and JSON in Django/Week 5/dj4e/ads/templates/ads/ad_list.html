@@ -8,8 +8,8 @@
   <input type="text" placeholder="Search.." name="search"
   {% if search %} value="{{ search }}" {% endif %}
   >
-  <button type="submit"><i class="fa fa-search"></i></button>
-<a href="{% url 'ads:all' %}"><i class="fa fa-undo"></i></a>
+  <button type="submit" aria-label="Search"><i class="fa fa-search"></i></button>
+<a href="{% url 'ads:all' %}" aria-label="Clear search"><i class="fa fa-undo"></i></a>
 </form>
 </div>
 
