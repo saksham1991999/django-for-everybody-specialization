@@ -1,14 +1,22 @@
-from unesco.models import Category, States, Region, Iso, Site
-
 import csv  # https://docs.python.org/3/library/csv.html
 
 # https://django-extensions.readthedocs.io/en/latest/runscript.html
 
 # python3 manage.py runscript many_load
 
+# Note: This script requires the 'unesco' app from Django Features Week 6.
+# It is kept here as a reference but will not run without that app installed.
+
+try:
+    from unesco.models import Category, States, Region, Iso, Site
+except ImportError:
+    Category = States = Region = Iso = Site = None
 
 
 def run():
+    if Category is None:
+        print("This script requires the 'unesco' app. See Django Features and Libraries Week 6.")
+        return
     fhand = open('unesco/whc-sites-2018-clean.csv')
     reader = csv.reader(fhand)
     next(reader)  # Advance past the header
