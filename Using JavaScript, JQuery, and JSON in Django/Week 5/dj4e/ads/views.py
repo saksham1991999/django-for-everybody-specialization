@@ -2,6 +2,7 @@ from django.views import View
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import CreateView, UpdateView, DeleteView, ListView, DetailView
 from django.contrib.humanize.templatetags.humanize import naturaltime
@@ -109,6 +110,7 @@ class AdDeleteView(OwnerDeleteView):
     model = Ad
 
 
+@login_required
 def stream_file(request, pk):
     ad = get_object_or_404(Ad, id=pk)
     response = HttpResponse()
@@ -141,7 +143,6 @@ from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from django.db.utils import IntegrityError
 
-@method_decorator(csrf_exempt, name='dispatch')
 class AddFavoriteView(LoginRequiredMixin, View):
     def post(self, request, pk) :
         ad = get_object_or_404(Ad, id=pk)
