@@ -36,22 +36,22 @@ def run():
 
         try:
             year = int(row[3])
-        except:
+        except (ValueError, IndexError):
             year = None
 
         try:
             longitude = float(row[4])
-        except:
+        except (ValueError, IndexError):
             longitude = None
 
         try:
             latitude = float(row[5])
-        except:
+        except (ValueError, IndexError):
             latitude = None
 
         try:
             area_hectares = float(row[6])
-        except:
+        except (ValueError, IndexError):
             area_hectares = None
 
         site = Site.objects.create(
