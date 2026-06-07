@@ -1,7 +1,7 @@
 {% extends "base_bootstrap.html" %}
 
 {% block content %}
-  <h1>Make List</h1>
+  <h1>Breed List</h1>
   {% if breed_list %}
   <ul>
     {% for breed in breed_list %}
@@ -17,6 +17,6 @@
   {% endif %}
   <p><a href="{% url 'cats:breed_create' %}">Add a breed</a></p>
   <p>
-    <a href="{% url 'cats:all' %}">Back to autos</a>
+    <a href="{% url 'cats:all' %}">Back to cats</a>
   </p>
 {% endblock %}
