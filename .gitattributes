@@ -1,2 +1,29 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Python
+*.py text diff=python
+*.pyw text
+
+# Markdown
+*.md text
+*.mdx text
+
+# HTML/CSS/JS
+*.html text diff=html
+*.css text
+*.js text
+
+# SQL
+*.sql text
+
+# CSV
+*.csv text
+
+# Config
+*.yml text
+*.yaml text
+*.json text
+*.cfg text
+*.ini text
+*.toml text

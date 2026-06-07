@@ -60,7 +60,7 @@
 <script>
 function favPost(url, ad_id) {
     console.log('Requesting JSON');
-    $.post(url, {},  function(rowz){
+    $.post(url, {"csrfmiddlewaretoken": "{{ csrf_token }}"},  function(rowz){
         console.log(url, 'finished');
         $("#unfavorite_star_"+ad_id).toggle();
         $("#favorite_star_"+ad_id).toggle();

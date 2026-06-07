@@ -2,6 +2,7 @@ from django.views import View
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import CreateView, UpdateView, DeleteView, ListView, DetailView
 
@@ -22,22 +23,23 @@ class AdDetailView(OwnerDetailView):
     template_name = "ads/ad_detail.html"
 
     def get(self, request, pk) :
-        x = Ad.objects.get(id=pk)
-        comments = Comment.objects.filter(ad=x).order_by('-updated_at')
+        ad = get_object_or_404(Ad, id=pk)
+        comments = Comment.objects.filter(ad=ad).order_by('-updated_at')
         comment_form = CommentForm()
-        context = { 'ad' : x, 'comments': comments, 'comment_form': comment_form }
+        context = { 'ad' : ad, 'comments': comments, 'comment_form': comment_form }
         return render(request, self.template_name, context)
 
 class AdCreateView(LoginRequiredMixin, CreateView):
     template_name = 'ads/ad_form.html'
     success_url = reverse_lazy('ads:all')
 
-    def get(self, request, pk=None):
+    def get(self, request):
         form = CreateForm()
         ctx = {'form': form}
         return render(request, self.template_name, ctx)
 
-    def post(self, request, pk=None):
+    def post(self, request):
+        form = CreateForm(request.POST, request.FILES or None)
         form = CreateForm(request.POST, request.FILES or None)
         if not form.is_valid():
             ctx = {'form': form}
@@ -76,6 +78,7 @@ class AdDeleteView(OwnerDeleteView):
     model = Ad
 
 
+@login_required
 def stream_file(request, pk):
     ad = get_object_or_404(Ad, id=pk)
     response = HttpResponse()
