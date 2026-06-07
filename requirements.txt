@@ -1,0 +1,3 @@
+# Django for Everybody Specialization - Dependencies
+
+Django>=2.1,<5.0
