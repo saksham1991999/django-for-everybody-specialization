@@ -1,5 +1,7 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="utf-8">
     <title>{{ settings.APP_NAME }}</title>
     <!-- edit samples/settings.py and add APP_NAME='DJ4E Samples' or similar
         Also make sure that home/context_processors.py exists and is included
@@ -23,9 +25,9 @@ Id: {{ user.id }}
 Type: {% if backends.associated %} GitHub {% else %} Local {% endif %}
 </pre>
 </p>
-<p>You can <a href="/accounts/logout">Logout</a></p>
+<p>You can <a href="{% url 'logout' %}">Logout</a></p>
 {% else %}
-<p>You can <a href="/accounts/login">Login</a> if you like.</p>
+<p>You can <a href="{% url 'login' %}">Login</a> if you like.</p>
 {% endif %}
 {% if islocal %}
 Some of the samples will require a user login to be created.
