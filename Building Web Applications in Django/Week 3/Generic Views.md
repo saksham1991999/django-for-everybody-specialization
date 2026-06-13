@@ -16,10 +16,10 @@
 
 ### 3. In the class django.views.generic.detail.Detailview, which of the following methods is called earliest in the process?
 
-- [ ] dispatch()
+- [x] dispatch()
 - [ ] get_queryset()
 - [ ] get_object()
-- [x] ender_to_response()
+- [ ] render_to_response()
 
 ### 4. In the class django.views.generic.detail.DetailView, which of the following methods is called latest in the process?
 
