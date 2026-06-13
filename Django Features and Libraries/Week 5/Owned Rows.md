@@ -94,5 +94,5 @@
 - [ ] pre_post()
 - [ ] form_valid()
 - [ ] first_post()
-- [x] get_query_set()
-- [ ] clean()
+- [ ] get_query_set()
+- [x] clean()
